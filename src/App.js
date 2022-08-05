@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route } from "react-router-dom";
+import { Redirect } from "react-router-dom";
+import Home from "./views/Home";
+import "./App.css";
+import Character from "./components/character/Character";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg"
+        alt="Logo"
+        style={{
+          textAlign: "center",
+          width: "100%",
+          background: "#c4d560",
+          padding: "5px 25%",
+        }}
+      />
+      <Redirect exact from="/" to="/home" />
+      <Route path="/home" exact component={Home} />
+      <Route path="/home/characters" exact component={Character} />
     </div>
   );
 }
-
-export default App;
