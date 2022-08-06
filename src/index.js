@@ -13,7 +13,6 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        {console.log("index")}
         <App />
       </BrowserRouter>
     </Provider>

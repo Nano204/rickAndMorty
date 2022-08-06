@@ -1,12 +1,9 @@
-import { Route } from "react-router-dom";
 import NavBar from "../components/navBar/NavBar";
-import Character from "../components/character/Character";
 
-export default function home() {
+export default function home(props) {
   return (
     <div>
-      <Route path="/home" component={NavBar} />
-
+      <NavBar />
     </div>
   );
 }
